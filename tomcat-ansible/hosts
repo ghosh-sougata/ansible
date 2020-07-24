@@ -1,4 +1,5 @@
 [tomcat-nodes]
 #192.168.10.10 # Add Server IP address, one line per server
 #132.145.132.125
-localhost
+#localhost
+150.136.68.154
