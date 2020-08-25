@@ -1,0 +1,29 @@
+$ ssh-agent bash
+$ ssh-add ~/.ssh/id_rsa
+
+$ cat /etc/os-release
+$ hostnamectl
+
+List Users:
+$ awk -F: '{ print $ 1}' /etc/passwd
+$ cut -d: -f1 /etc/passwd
+
+$ ps -f --pid 1
+where: systemd is SystemD - Services
+Ansible shows you this information in the ansible_service_mgr variable
+when: ansible_service_mgr == "systemd"
+
+$ ~/.ssh/authorized_keys
+$ ansible all -i hosts -m ping
+$ ansible-playbook --syntax-check tomcat-setup.yml
+$ ansible-playbook --check tomcat-setup.yml
+$ ansible all -i hosts -m setup
+
+
+###   connection: local if no ssh
+$ sudo ansible-playbook -i hosts tomcat-setup.yml -vvvv
+$ systemctl status tomcat
+$ curl http://localhost:8080
+
+browser:
+http://132.145.132.125:8080
